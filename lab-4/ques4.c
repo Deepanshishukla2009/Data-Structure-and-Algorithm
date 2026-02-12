@@ -26,9 +26,9 @@ int main() {
     printf("Salary: %.2f\n", p->salary);
 
     printf("\nAddresses of Employee Members:\n");
-    printf("Address of ID: %p\n", (void*)&p->id);
-    printf("Address of Name: %p\n", (void*)&p->name);
-    printf("Address of Salary: %p\n", (void*)&p->salary);
+    printf("Address of ID: %p\n", &p->id);
+    printf("Address of Name: %p\n",&p->name);
+    printf("Address of Salary: %p\n",&p->salary);
 
     return 0;
 }
