@@ -15,14 +15,14 @@ int main() {
     printf("\nEnter elements of Matrix A:\n");
     for (int i = 0; i < rA; i++) {
         for (int j = 0; j < cA; j++) {
-            printf("A[%d][%d]: ", i, j);
+            printf("A[%d][%d]:", i, j);
             scanf("%d", &A[i][j]);
         }
     }
     printf("\nEnter elements of Matrix B:\n");
     for (int i = 0; i < rB; i++) {
         for (int j = 0; j < cB; j++) {
-            printf("B[%d][%d]: ", i, j);
+            printf("B[%d][%d]:", i, j);
             scanf("%d", &B[i][j]);
         }
     }
