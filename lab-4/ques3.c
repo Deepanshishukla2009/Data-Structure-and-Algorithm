@@ -1,5 +1,5 @@
+//pointer to an array
 #include <stdio.h>
-
 int main() {
     int n;
     printf("Enter number of elements in the array: ");

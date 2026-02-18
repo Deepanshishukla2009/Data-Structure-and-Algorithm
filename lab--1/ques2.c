@@ -1,4 +1,6 @@
-#include <stdio.h>;
+//time complexity
+
+#include <stdio.h>
 #include <time.h>
 
 int main() {
@@ -8,12 +10,11 @@ int main() {
 
     clock_t start = clock();
 
-    // Outer loop runs n times
     for (i = 1; i <= n; i++) {
         int temp = 1;
-        // Inner loop runs log(n) times
+        
         while (temp <= n) {
-            temp = temp * 2;   // doubling until > n
+            temp = temp * 2;   
         }
     }
 

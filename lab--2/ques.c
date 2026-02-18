@@ -1,3 +1,4 @@
+//insertion sort in array(best and worst case)
 #include <stdio.h>
 #include <stdlib.h>   
 #include <time.h>     
@@ -21,7 +22,6 @@ int main() {
     }
 
     // ---------------- Best Case ----------------
-    // Sort array ascending first (best case input for insertion sort)
     for (i = 0; i < n - 1; i++) {
         for (j = i + 1; j < n; j++) {
             if (arr[i] > arr[j]) {
@@ -33,7 +33,7 @@ int main() {
     }
 
     start = clock();
-    // Insertion Sort on already sorted array (Best Case)
+   
     for (i = 1; i < n; i++) {
         key = arr[i];
         j = i - 1;
@@ -49,7 +49,7 @@ int main() {
     printf("\nBest Case Time = %f seconds", time_taken);
 
     // ---------------- Worst Case ----------------
-    // Sort array descending first (worst case input for insertion sort)
+
     for (i = 0; i < n - 1; i++) {
         for (j = i + 1; j < n; j++) {
             if (arr[i] < arr[j]) {
@@ -61,7 +61,7 @@ int main() {
     }
 
     start = clock();
-    // Insertion Sort on reverse sorted array (Worst Case)
+   
     for (i = 1; i < n; i++) {
         key = arr[i];
         j = i - 1;
