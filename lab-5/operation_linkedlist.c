@@ -28,7 +28,7 @@ void createList()
         if(head == NULL)
         {
             head = newNode;
-            temp = head;
+             temp = head;
         }
         else
         {

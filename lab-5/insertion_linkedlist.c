@@ -72,19 +72,28 @@ struct node* insertatbeginning(struct node *head,int element)
  int main()
  {
     struct node *head=NULL;
-    int i,element,pos,choice;
-    printf("enter 5 elements:\n");
-    for(i=0;i<5;i++)
+    int n,i,element,pos,choice;
+    printf("enter no of nodes:");
+    scanf("%d",&n);
+    printf("enter elements:\n");
+    for(i=0;i<n;i++)
     {
         scanf("%d",&element);
         head=insertatlast(head,element);
     }
+    while(1){
     display(head);
     printf("\n 1. insert at beginning");
     printf("\n 2. insert at last");
     printf("\n 3. insert at given node");
+    printf("\n 4. exit");
     printf("\n enter choice:");
     scanf("%d",&choice);
+    if(choice==4)
+    {
+        printf("exiting.....\n");
+        break;
+    }
 
     printf("enter element:");
     scanf("%d",&element);
@@ -104,6 +113,7 @@ struct node* insertatbeginning(struct node *head,int element)
         default:
         printf("invalid choice");
     }
+}
     printf("\n updated linkedlist:\n");
     display(head);
     return 0;
