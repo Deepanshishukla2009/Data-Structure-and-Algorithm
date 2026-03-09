@@ -11,7 +11,7 @@ int main() {
     scanf("%d", &rB);
     printf("Enter number of columns for Matrix B: ");
     scanf("%d", &cB);
-    if (rA != rB || cA != cB) {
+    if (rA != rB && cA != cB) {
         printf("\nMatrix addition and subtraction not possible!");
         printf("\nBoth matrices must have the same number of rows and columns.\n");
         return 0; 
