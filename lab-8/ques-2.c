@@ -12,15 +12,15 @@ struct Node *front = NULL, *rear = NULL;
 
 // Enqueue
 void enqueue(int x) {
-    struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
-    temp->data = x;
-    temp->next = NULL;
+    struct Node* newnode = (struct Node*)malloc(sizeof(struct Node));
+    newnode->data = x;
+    newnode->next = NULL;
 
     if (rear == NULL) {
-        front = rear = temp;
+        front = rear = newnode;
     } else {
-        rear->next = temp;
-        rear = temp;
+        rear->next = newnode;
+        rear = newnode;
     }
 }
 
