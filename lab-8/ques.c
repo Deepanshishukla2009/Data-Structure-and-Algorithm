@@ -1,0 +1,2 @@
+/*Two stack in a single array*/
+
