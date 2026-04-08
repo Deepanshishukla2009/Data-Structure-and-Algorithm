@@ -7,7 +7,7 @@ struct node
     struct node *next;
 };
 
-// Insert at end
+
 struct node* insertAtEnd(struct node *head, int data)
 {
     struct node *newNode = (struct node*)malloc(sizeof(struct node));
@@ -25,7 +25,7 @@ struct node* insertAtEnd(struct node *head, int data)
     return head;
 }
 
-// Find nth node from end
+
 void findNthFromEnd(struct node *head, int n)
 {
     struct node *first = head;
