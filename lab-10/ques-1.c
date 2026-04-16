@@ -23,12 +23,13 @@ void insert(int value, int index) {
     }
 
     if (value < tree[index]) {
-        insert(value, 2 * index + 1);   // Left child
+        insert(value, 2 * index + 1);   // Left
     } else {
-        insert(value, 2 * index + 2);   // Right child
+        insert(value, 2 * index + 2);   // Right
     }
 }
 
+// 🔹 Inorder (Left Root Right)
 void inorder(int index) {
     if (index >= SIZE || tree[index] == -1)
         return;
@@ -36,6 +37,26 @@ void inorder(int index) {
     inorder(2 * index + 1);
     printf("%d ", tree[index]);
     inorder(2 * index + 2);
+}
+
+// 🔹 Preorder (Root Left Right)
+void preorder(int index) {
+    if (index >= SIZE || tree[index] == -1)
+        return;
+
+    printf("%d ", tree[index]);
+    preorder(2 * index + 1);
+    preorder(2 * index + 2);
+}
+
+// 🔹 Postorder (Left Right Root)
+void postorder(int index) {
+    if (index >= SIZE || tree[index] == -1)
+        return;
+
+    postorder(2 * index + 1);
+    postorder(2 * index + 2);
+    printf("%d ", tree[index]);
 }
 
 void display() {
@@ -60,8 +81,14 @@ int main() {
     insert(60, 0);
     insert(80, 0);
 
-    printf("Inorder Traversal:\n");
+    printf("Inorder: ");
     inorder(0);
+
+    printf("\nPreorder: ");
+    preorder(0);
+
+    printf("\nPostorder: ");
+    postorder(0);
 
     display();
 
