@@ -23,13 +23,13 @@ void insert(int value, int index) {
     }
 
     if (value < tree[index]) {
-        insert(value, 2 * index + 1);   // Left
+        insert(value, 2 * index + 1);   
     } else {
-        insert(value, 2 * index + 2);   // Right
+        insert(value, 2 * index + 2);   
     }
 }
 
-// 🔹 Inorder (Left Root Right)
+
 void inorder(int index) {
     if (index >= SIZE || tree[index] == -1)
         return;
@@ -39,7 +39,7 @@ void inorder(int index) {
     inorder(2 * index + 2);
 }
 
-// 🔹 Preorder (Root Left Right)
+
 void preorder(int index) {
     if (index >= SIZE || tree[index] == -1)
         return;
@@ -49,7 +49,7 @@ void preorder(int index) {
     preorder(2 * index + 2);
 }
 
-// 🔹 Postorder (Left Right Root)
+
 void postorder(int index) {
     if (index >= SIZE || tree[index] == -1)
         return;
