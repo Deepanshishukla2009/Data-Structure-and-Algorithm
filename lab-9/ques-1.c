@@ -24,7 +24,37 @@ void insert(int value) {
     printf("Tree is full\n");
 }
 
-// Display (simple)
+// 🔹 Inorder (Left Root Right)
+void inorder(int index) {
+    if (index >= SIZE || tree[index] == -1)
+        return;
+
+    inorder(2 * index + 1);
+    printf("%d ", tree[index]);
+    inorder(2 * index + 2);
+}
+
+// 🔹 Preorder (Root Left Right)
+void preorder(int index) {
+    if (index >= SIZE || tree[index] == -1)
+        return;
+
+    printf("%d ", tree[index]);
+    preorder(2 * index + 1);
+    preorder(2 * index + 2);
+}
+
+// 🔹 Postorder (Left Right Root)
+void postorder(int index) {
+    if (index >= SIZE || tree[index] == -1)
+        return;
+
+    postorder(2 * index + 1);
+    postorder(2 * index + 2);
+    printf("%d ", tree[index]);
+}
+
+// Display (simple array)
 void display() {
     printf("Binary Tree (Array form):\n");
     for (int i = 0; i < SIZE; i++) {
@@ -44,6 +74,15 @@ int main() {
     insert(50);
 
     display();
+
+    printf("Inorder: ");
+    inorder(0);
+
+    printf("\nPreorder: ");
+    preorder(0);
+
+    printf("\nPostorder: ");
+    postorder(0);
 
     return 0;
 }
